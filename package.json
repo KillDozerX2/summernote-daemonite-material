@@ -1,0 +1,27 @@
+{
+  "name": "summernote-daemonite-material",
+  "version": "1.0.0",
+  "description": "This is the material theme for summernote based on the Daemonite material theme for Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w src/ -o dist/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KillDozerX2/summernote-daemonite-material.git"
+  },
+  "author": "Himanshu Pant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KillDozerX2/summernote-daemonite-material/issues"
+  },
+  "homepage": "https://github.com/KillDozerX2/summernote-daemonite-material#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "daemonite-material": "^4.1.1",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0",
+    "summernote": "^0.8.12"
+  }
+}

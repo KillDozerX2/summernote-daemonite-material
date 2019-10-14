@@ -1,0 +1,24 @@
+/*
+    ====================================================
+    This is the popover partial.
+    ====================================================
+*/
+
+/* Popover
+------------------------------------------*/
+.note-popover.popover {
+    max-width: none;
+    .popover-content {
+        a {
+            display: inline-block;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; /* for FF */
+            vertical-align: middle; /* for FF */
+        }
+    }
+    .arrow {
+        left: 20px !important;
+    }
+}

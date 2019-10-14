@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            content="initial-scale=1, shrink-to-fit=no, width=device-width"
+            name="viewport"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,700|Roboto+Slab:300,400,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
+        <link
+            href="node_modules/daemonite-material/css/material.min.css"
+            rel="stylesheet"
+        />
+        <link href="dist/summernote.css" rel="stylesheet" />
+    </head>
+    <body style="background: url('background.jpg');">
+        <main class="container pt-5 my-5">
+            <div id="summernote"></div>
+            <div class="display-4 text-center">
+                This theme is designed to ensure that the summernote editor
+                works with the daemonite theme for bootstrap.
+            </div>
+        </main>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/daemonite-material/js/material.min.js"></script>
+        <script src="node_modules/summernote/dist/summernote.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#summernote").summernote({
+                    height: 300,
+                    dialogsFade: true
+                });
+            });
+        </script>
+    </body>
+</html>
