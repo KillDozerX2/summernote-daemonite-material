@@ -33,15 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
-!node_modules
-node_modules/*
-
-!node_modules/jquery/
-
-!node_modules/popper.js
-!node_modules/bootstrap/
-!node_modules/daemonite-material/
-
+node_modules
 jspm_packages/
 
 # TypeScript v1 declaration files
