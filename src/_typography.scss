@@ -1,0 +1,23 @@
+/* Added blockquote styles that do not require the blockquote class */
+blockquote {
+    border-left: 0.3125rem solid $primary-color;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+/* Added style blocks for blockquotes */
+pre {
+    display: block;
+    padding: 12px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: 1px solid $border-color;
+}

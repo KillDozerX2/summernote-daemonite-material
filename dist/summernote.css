@@ -2,6 +2,28 @@
 /* End Theme Variables */
 /* Begin Dropzone Variables */
 /* End Dropzone Variables */
+/* Added blockquote styles that do not require the blockquote class */
+blockquote {
+  border-left: 0.3125rem solid #9c27b0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  padding: 0 1rem; }
+
+/* Added style blocks for blockquotes */
+pre {
+  display: block;
+  padding: 12px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #a9a9a9; }
+
 /*
     ====================================================
     This is the popover partial.
@@ -10,18 +32,21 @@
 /* Popover
 ------------------------------------------*/
 .note-popover.popover {
+  display: none;
   max-width: none; }
-  .note-popover.popover .popover-content a {
-    display: inline-block;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    /* for FF */
-    vertical-align: middle;
-    /* for FF */ }
-  .note-popover.popover .arrow {
-    left: 20px !important; }
+  .note-popover.popover .popover-content {
+    padding-left: 5px; }
+    .note-popover.popover .popover-content a {
+      display: inline-block;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      /* for FF */
+      vertical-align: middle;
+      /* for FF */ }
+    .note-popover.popover .popover-content .btn-group {
+      box-shadow: unset; }
 
 /*
     ====================================================
@@ -32,11 +57,11 @@
   margin: 0;
   padding: 0 0 5px 5px;
   background: #f5f5f5;
+  /* css rules for the style toolbar */
   /* dropdown-menu for toolbar and popover */
   /* color palette for toolbar and popover */ }
   .note-toolbar > .btn-group {
     margin: 5px 5px 0 0;
-    height: 32px;
     background-color: unset;
     border-radius: unset;
     box-shadow: unset; }
@@ -67,8 +92,7 @@
         background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASAgMAAAAroGbEAAAACVBMVEUAAIjd6vvD2f9LKLW+AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfYAR0BKwNDEVT0AAAAG0lEQVQI12NgAAOtVatWMTCohoaGUY+EmIkEAEruEzK2J7tvAAAAAElFTkSuQmCC") repeat; }
   .note-toolbar .note-style .dropdown-style blockquote,
   .note-toolbar .note-style .dropdown-style pre {
-    margin: 0;
-    padding: 5px 10px; }
+    margin: 0; }
   .note-toolbar .note-style .dropdown-style h1,
   .note-toolbar .note-style .dropdown-style h2,
   .note-toolbar .note-style .dropdown-style h3,
@@ -79,46 +103,60 @@
     margin: 0;
     padding: 0; }
   .note-toolbar .note-color-all .dropdown-menu {
-    min-width: 337px; }
+    min-width: 340px; }
   .note-toolbar .note-color .dropdown-toggle {
     width: 20px;
     padding-left: 5px; }
-  .note-toolbar .note-color .dropdown-menu .btn-group {
-    margin: 0; }
-    .note-toolbar .note-color .dropdown-menu .btn-group:first-child {
-      margin: 0 5px; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-palette-title {
-      font-size: 12px;
-      margin: 2px 7px;
-      text-align: center;
-      border-bottom: 1px solid #eee; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-color-reset,
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-color-select {
-      font-size: 11px;
-      margin: 3px;
-      padding: 0 3px;
-      cursor: pointer;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-color-row {
+  .note-toolbar .note-color .dropdown-menu .note-palette {
+    width: 160px;
+    float: left;
+    margin: 0px 5px; }
+    .note-toolbar .note-color .dropdown-menu .note-palette .btn {
+      font-size: 0.7em;
+      margin: 5px 1px;
+      width: 158px; }
+    .note-toolbar .note-color .dropdown-menu .note-palette .note-palette-title {
+      text-align: center; }
+    .note-toolbar .note-color .dropdown-menu .note-palette .note-color-row {
       height: 20px; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-color-reset:hover {
+    .note-toolbar .note-color .dropdown-menu .note-palette .note-color-reset:hover {
       background: #eee; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-color-select-btn {
+    .note-toolbar .note-color .dropdown-menu .note-palette .note-color-select-btn {
       display: none; }
-    .note-toolbar .note-color .dropdown-menu .btn-group .note-holder-custom .note-color-btn {
+    .note-toolbar .note-color .dropdown-menu .note-palette .note-holder-custom .note-color-btn {
       border: 1px solid #eee; }
   .note-toolbar .note-para .dropdown-menu {
-    min-width: 216px;
     padding: 5px; }
-    .note-toolbar .note-para .dropdown-menu > div:first-child {
-      margin-right: 5px; }
+    .note-toolbar .note-para .dropdown-menu .btn-group {
+      margin: 0; }
+      .note-toolbar .note-para .dropdown-menu .btn-group:first-child {
+        margin-bottom: 6px; }
   .note-toolbar .dropdown-menu {
-    min-width: 90px;
+    /* Material styles added for list item */
     /* dropdown-menu right position */
     /* http://forrst.com/posts/Bootstrap_right_positioned_dropdown-2KB */
     /* dropdown-menu for selectbox */ }
+    .note-toolbar .dropdown-menu li {
+      background: none;
+      border: 0;
+      clear: both;
+      color: rgba(0, 0, 0, 0.87);
+      display: block;
+      font-weight: inherit;
+      padding: 6px 20px;
+      position: relative;
+      text-align: inherit;
+      transform-origin: 0 0;
+      transition-duration: 0.3s;
+      transition-property: background-color, color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      width: 100%; }
+      .note-toolbar .dropdown-menu li a {
+        color: inherit;
+        text-decoration: none; }
+      .note-toolbar .dropdown-menu li:hover {
+        background-color: #f5f5f5; }
     .note-toolbar .dropdown-menu.right {
       right: 0;
       left: auto; }
@@ -494,6 +532,9 @@
 
 /* Dialog
 ------------------------------------------*/
+.note-editor .modal .modal-header {
+  display: unset; }
+
 .note-dialog > div {
   display: none;
   /* BS2's hide pacth. */ }

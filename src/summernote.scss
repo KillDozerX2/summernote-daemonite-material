@@ -1,8 +1,9 @@
 @import "elements.scss";
 @import "variables.scss";
+@import "typography.scss";
 @import "popover.scss";
 @import "toolbar.scss";
-@import "_fonts.scss";
+@import "fonts.scss";
 
 /* Layout
  ------------------------------------------*/
@@ -240,6 +241,11 @@
 
 /* Dialog
 ------------------------------------------*/
+.note-editor .modal {
+    .modal-header {
+        display: unset;
+    }
+}
 .note-dialog {
     & > div {
         display: none; /* BS2's hide pacth. */
